@@ -1,8 +1,8 @@
 <div align=center>
-<img src="https://github.com/BestModules-Libraries/img/blob/main/BM22S2021-1_BMA26M202_V1.0.png" width="480" height="240"> 
+<img src="https://github.com/BestModules-Libraries/img/blob/main/BM22S3021-1_BMA36M302_V1.0.png" width="480" height="240"> 
 </div> 
 
-BM22S2021-1
+BM22S3021-1
 ===========================================================
 
 #### Applicable types:
@@ -10,12 +10,12 @@ BM22S2021-1
 
 |Part No.   |Description                   |
 |:---------:|:----------------------------:|
-|BM22S2021-1||
-|BMA26M202  |  |
+|BM22S3021-1||
+|BMA36M302  |  |
 
 </div> 
 
-This library can be installed via the Arduino Library manager. Search for **BM22S2021-1**. 
+This library can be installed via the Arduino Library manager. Search for **BM22S3021-1**. 
 
 Repository Contents
 -------------------
@@ -28,7 +28,7 @@ Repository Contents
 Documentation 
 -------------------
 
-* **[BM22S2021-1 Arduino Library V1.0.1 Description v100]( https://www.bestmodulescorp.com/bm22s2021-1.html#tab-product2 )** - Arduino Library Description.
+* **[BM22S3021-1 Arduino Library V1.0.1 Description v100]( https://www.bestmodulescorp.com/bm22s3021-1.html#tab-product2 )** - Arduino Library Description.
 
 Version History  
 -------------------
