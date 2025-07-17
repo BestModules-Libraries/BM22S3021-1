@@ -1,9 +1,9 @@
 /*****************************************************************
 File:        BM22S3021-1.cpp
-Author:      BESTMODULES
+Author:      BEST MODULES CORP.
 Description: None
 History:     None
-V1.0.1 --Initial version; 2023-3-14; Arduino IDE : v1.8.19
+Version:     V1.0.2   -- 2025-07-16
 ******************************************************************/
 #include "BM22S3021-1.h"
 
@@ -85,7 +85,7 @@ Others: None
 **********************************************************/
 uint8_t BM22S3021_1::getWorkStatus()
 {
-  return readParam(0xD2, 50);
+  return readParam(0xD2, 0x50);
 }
 
 /**********************************************************
@@ -96,7 +96,7 @@ Others: None
 **********************************************************/
 uint8_t BM22S3021_1::readADValue()
 {
-  return readParam(0xD2, 40);
+  return readParam(0xD2, 0x40);
 }
 
 /**********************************************************
@@ -107,7 +107,7 @@ Others: None
 **********************************************************/
 uint8_t BM22S3021_1::readAlarmPoint()
 {
-  return readParam(0xD2, 41);
+  return readParam(0xD2, 0x41);
 }
 
 /**********************************************************
@@ -459,6 +459,13 @@ Others: None
 void BM22S3021_1::writeBytes(uint8_t wbuf[], uint8_t wlen)
 {
   clear_UART_FIFO();
+  Serial.print("wBuf: ");
+  for (uint8_t i = 0; i < wlen; i++)
+  {
+    Serial.print(wbuf[i], HEX);
+    Serial.print("  ");
+  }
+  Serial.println();
   _hardSerial->write(wbuf, wlen);
 }
 
@@ -491,6 +498,13 @@ uint8_t BM22S3021_1::readBytes(uint8_t rbuf[], uint8_t rlen, uint16_t timeout)
     }
     rbuf[i] = _hardSerial->read();
   }
+  Serial.print("rbuf:");
+  for (i = 0; i < rlen;i++)
+  {
+    Serial.print(rbuf[i],HEX);
+    Serial.print(" ");
+  }
+  Serial.println(" ");
 
   /* check Sum */
   for (i = 0; i < (rlen - 1); i++)
