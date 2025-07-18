@@ -39,7 +39,7 @@ Version History
 * **V1.0.1**  
 &emsp;&emsp;- Initial public release.
 * **V1.0.2**  
-&emsp;&emsp;- Modify functions "getWorkStatus","readADValue" and "readAlarmPoint" to ensure that active data reading(requestInfoPackage) is normal; 
+&emsp;&emsp;- Modify functions "getWorkStatus","readADValue" and "readAlarmPoint" to ensure that active data reading(requestInfoPackage) is normal;  
 &emsp;&emsp;- Add applicable models: BMA36M302A; 
 
 License Information
