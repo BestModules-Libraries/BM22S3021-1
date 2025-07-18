@@ -23,8 +23,8 @@ BM22S3021_1::BM22S3021_1(uint8_t statusPin, HardwareSerial *theSerial)
 
 /**********************************************************
 Description: Module initialization
-Parameters: None
-Return: None
+Parameters: void
+Return: void
 Others: None
 **********************************************************/
 void BM22S3021_1::begin()
@@ -35,8 +35,8 @@ void BM22S3021_1::begin()
 
 /**********************************************************
 Description: Preheat Module(about 180 seconds)
-Parameters: None
-Return: None
+Parameters: void
+Return: void
 Others: None
 **********************************************************/
 void BM22S3021_1::preheatCountdown()
@@ -68,8 +68,8 @@ void BM22S3021_1::preheatCountdown()
 
 /**********************************************************
 Description: Get STATUS pin level
-Parameters: None
-Return: None
+Parameters: void
+Return: status pin level
 Others: None
 **********************************************************/
 uint8_t BM22S3021_1::getSTATUS()
@@ -79,7 +79,7 @@ uint8_t BM22S3021_1::getSTATUS()
 
 /**********************************************************
 Description: Get the current status of the module
-Parameters: None
+Parameters: void
 Return: module status (refer to datasheet for meaning of each bit)
 Others: None
 **********************************************************/
@@ -90,7 +90,7 @@ uint8_t BM22S3021_1::getWorkStatus()
 
 /**********************************************************
 Description: Query gas real-time A/D value
-Parameters: None
+Parameters: void
 Return: 8-bit A/D value
 Others: None
 **********************************************************/
@@ -101,7 +101,7 @@ uint8_t BM22S3021_1::readADValue()
 
 /**********************************************************
 Description: Query the calibrated gas alarm point
-Parameters: None
+Parameters: void
 Return: 8-bit A/D value
 Others: None
 **********************************************************/
@@ -146,7 +146,7 @@ uint8_t BM22S3021_1::requestInfoPackage(uint8_t array[])
 
 /**********************************************************
 Description: Query whether the 18-byte data sent by the module is received
-Parameters: None
+Parameters: void
 Return: TRUE(1): 18-byte data received
         FALSE(0): 18-byte data not received
 Others: Only used in the mode of Tx Auto Output Info
@@ -229,7 +229,7 @@ bool BM22S3021_1::isInfoAvailable()
 Description: Read the 18-byte data of sent by the module
 Parameters: array: The array for storing the 18-byte module information
                   (refer to datasheet for meaning of each bit)
-Return: None
+Return: void
 Others: Use after isInfoAvailable()
 **********************************************************/
 void BM22S3021_1::readInfoPackage(uint8_t array[])
@@ -242,7 +242,7 @@ void BM22S3021_1::readInfoPackage(uint8_t array[])
 
 /**********************************************************
 Description: Software reset module
-Parameters: None
+Parameters: void
 Return: 0: check ok
         1: check error
         2: timeout error
@@ -259,7 +259,7 @@ uint8_t BM22S3021_1::resetModule()
 
 /**********************************************************
 Description: Restore module parameters to factory default values
-Parameters: None
+Parameters: void
 Return: 0: Check ok
         1: Check error
         2: Timeout error
@@ -309,7 +309,7 @@ uint8_t BM22S3021_1::readParam(uint8_t cmd, uint8_t addr)
 
 /**********************************************************
 Description: Get firmware version
-Parameters: None
+Parameters: void
 Return: FW version, for example 0x0101: V1.01
 Others: None
 **********************************************************/
@@ -362,7 +362,7 @@ uint8_t BM22S3021_1::getProDate(uint8_t array[])
 
 /**********************************************************
 Description: Query whether the automatic serial output of the module is enabled
-Parameters: None
+Parameters: void
 Return: TRUE(1): auto-Tx ENABLED
         FALSE(0): auto-Tx DISENABLED
 Others: None
@@ -437,8 +437,8 @@ uint8_t BM22S3021_1::calibrateModule(uint8_t calibrateMode)
 
 /**********************************************************
 Description: Clear UART Receive FIFO
-Parameters: None
-Return: None
+Parameters: void
+Return: void
 Others: None
 **********************************************************/
 void BM22S3021_1::clear_UART_FIFO()
@@ -453,7 +453,7 @@ void BM22S3021_1::clear_UART_FIFO()
 Description: Write data through UART
 Parameters: wbuf:The array for storing Data to be sent
             wlen:Length of data sent
-Return: None
+Return: void
 Others: None
 **********************************************************/
 void BM22S3021_1::writeBytes(uint8_t wbuf[], uint8_t wlen)
